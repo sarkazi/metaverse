@@ -1,0 +1,48 @@
+.main {
+  padding: 100px 0;
+  position: relative;
+  @media (max-width: 1216px) {
+    & {
+      padding: 50px 0;
+    }
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: minmax(30%, 40%) minmax(300px, 800px);
+    align-items: center;
+    column-gap: 80px;
+    @media (max-width: 1216px) {
+      & {
+        justify-content: center;
+        column-gap: unset;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+      }
+    }
+    .imgBlock {
+      align-self: flex-end;
+      @media (max-width: 1216px) {
+        & {
+          margin-bottom: 50px;
+          margin-top: 300px;
+          align-self: unset;
+        }
+      }
+      @media (max-width: 400px) {
+        & {
+          margin-top: 250px;
+        }
+      }
+    }
+    .contentBlock {
+      display: flex;
+      flex-direction: column;
+      .list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.main {
+  position: relative;
+  color: white;
+  padding: 200px 0 100px 0;
+  @media (max-width: 1216px) {
+    & {
+      padding: 180px 0 80px 0;
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .titleBlock {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto;
+      align-self: center;
+      margin-bottom: -50px;
+      z-index: 3;
+      position: relative;
+      align-items: center;
+      .titleBottomBlock {
+        width: inherit;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        @media (max-width: 710px) {
+          & {
+            gap: 5px;
+          }
+        }
+        .d {
+          border: 18px solid #fff;
+          border-radius: 0px 50px 50px 0px;
+          width: 212px;
+          height: 110px;
+          @media (max-width: 905px) {
+            & {
+              width: 145px;
+              height: 75px;
+              border: 15px solid #fff;
+            }
+          }
+          @media (max-width: 710px) {
+            & {
+              width: 120px;
+              height: 60px;
+              border: 13px solid #fff;
+            }
+          }
+          @media (max-width: 564px) {
+            & {
+              width: 95px;
+              height: 50px;
+              border: 10px solid #fff;
+            }
+          }
+          @media (max-width: 438px) {
+            & {
+              width: 70px;
+              height: 40px;
+              border: 8px solid #fff;
+            }
+          }
+        }
+      }
+      .title {
+        font-weight: 700;
+        font-size: 144px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        box-sizing: border-box;
+        height: 100%;
+        text-transform: uppercase;
+        @media (max-width: 905px) {
+          & {
+            font-size: 100px;
+          }
+        }
+        @media (max-width: 710px) {
+          & {
+            font-size: 80px;
+          }
+        }
+        @media (max-width: 564px) {
+          & {
+            font-size: 65px;
+          }
+        }
+        @media (max-width: 438px) {
+          & {
+            font-size: 50px;
+          }
+        }
+      }
+    }
+    .cover {
+      border-radius: 140px 0px 0px 42px;
+      max-height: 485px;
+      max-width: 90%;
+      position: relative;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        border-radius: 140px 0px 0px 42px;
+      }
+    }
+  }
+}

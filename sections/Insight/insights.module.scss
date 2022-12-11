@@ -1,0 +1,18 @@
+.main {
+  padding: 100px 0;
+  position: relative;
+  @media (max-width: 1216px) {
+    & {
+      padding: 50px 0;
+    }
+  }
+  .insightContainer {
+    display: flex;
+    flex-direction: column;
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+}

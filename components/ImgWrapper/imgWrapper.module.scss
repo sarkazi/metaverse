@@ -1,0 +1,13 @@
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  .imgPlanetBlock {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    .imgPlanet {
+      width: 100%;
+      transform: rotate(40deg);
+    }
+  }
+}

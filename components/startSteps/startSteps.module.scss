@@ -1,0 +1,18 @@
+.step {
+  display: grid;
+  grid-template-columns: 70px auto;
+  align-items: center;
+  column-gap: 30px;
+  width: 70%;
+  @media (max-width: 470px) {
+    & {
+      width: 100%;
+    }
+  }
+  .text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    color: #b0b0b0;
+  }
+}
