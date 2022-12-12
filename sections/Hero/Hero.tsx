@@ -32,7 +32,7 @@ const Hero: FC<HeroProps> = ({ title }) => (
         dragConstraints={dragConstraints}
         className={styles.titleBlock}
       >
-        <h1 className={styles.title}>metaverse</h1>
+        <h1 className={styles.title}>{process.env.NEXT_PUBLIC_TITLE}</h1>
         <div className={styles.titleBottomBlock}>
           <h1 className={clsx(styles.title, styles.test)}>ma</h1>
           <div className={styles.d}></div>
