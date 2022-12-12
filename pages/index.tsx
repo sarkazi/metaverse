@@ -13,14 +13,7 @@ import {
 } from "../sections";
 import styles from "../styles/page.module.scss";
 
-import {
-  GetServerSideProps,
-  GetServerSideProps,
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticProps,
-  NextPage,
-} from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import { IExploreData, IInsightData, IWhatsNewData } from "../typings";
 import { fetchSanity } from "../utils/fetchSanity";
 import { groq } from "next-sanity";
