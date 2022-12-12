@@ -13,7 +13,14 @@ import {
 } from "../sections";
 import styles from "../styles/page.module.scss";
 
-import { GetServerSideProps, GetStaticProps, NextPage } from "next";
+import {
+  GetServerSideProps,
+  GetServerSideProps,
+  GetStaticPaths,
+  GetStaticProps,
+  GetStaticProps,
+  NextPage,
+} from "next";
 import { IExploreData, IInsightData, IWhatsNewData } from "../typings";
 import { fetchSanity } from "../utils/fetchSanity";
 import { groq } from "next-sanity";
@@ -26,8 +33,6 @@ type PageProps = {
 };
 
 const Page: NextPage<PageProps> = ({ explore, insight, whatsNew }) => {
-  console.log(explore, insight, whatsNew);
-
   return (
     <div className={styles.main}>
       <Navbar />
@@ -47,7 +52,9 @@ const Page: NextPage<PageProps> = ({ explore, insight, whatsNew }) => {
 
 export default Page;
 
-const getServerSideProps: GetServerSideProps<PageProps> = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<PageProps> = async (
+  ctx
+) => {
   try {
     const query = groq`
 
