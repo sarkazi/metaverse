@@ -2,7 +2,6 @@
 
 import ExploreCard from "../../components/explore/ExploreCard";
 import styles from "./explore.module.scss";
-
 import { FC, useState } from "react";
 import { TitleText } from "../../components/customTexts/CustomTexts";
 import Container from "../../components/container";

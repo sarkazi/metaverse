@@ -12,12 +12,9 @@ import {
   Footer,
 } from "../sections";
 import styles from "../styles/page.module.scss";
-
-import { GetServerSideProps, GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import { IExploreData, IInsightData, IWhatsNewData } from "../typings";
 import { fetchSanity } from "../utils/fetchSanity";
-import { groq } from "next-sanity";
-import { sanityClient } from "../config/sanity-config";
 
 type PageProps = {
   explore: IExploreData[];
@@ -49,21 +46,15 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async (
   ctx
 ) => {
   try {
-    const query = groq`
-
-*[_type == "insight"]
-`;
-
-    const insight = await sanityClient.fetch(query);
-    // const explore: IExploreData[] = await fetchSanity("getExplore");
-    // const insight: IInsightData[] = await fetchSanity("insight");
-    // const whatsNew: IWhatsNewData[] = await fetchSanity("whats-new");
+    const insight = await fetchSanity("insight");
+    const explore = await fetchSanity("explore");
+    const whatsNew = await fetchSanity("whatsNew");
 
     return {
       props: {
-        explore: [],
+        explore,
         insight,
-        whatsNew: [],
+        whatsNew,
       },
     };
   } catch (err) {

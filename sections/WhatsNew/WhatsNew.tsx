@@ -2,11 +2,9 @@
 
 import Container from "../../components/container";
 import styles from "./whatsNew.module.scss";
-
 import { DescriptionText } from "../../components/customTexts/CustomTexts";
 import { TitleText } from "../../components/customTexts/CustomTexts";
 import ImgWrapper from "../../components/ImgWrapper/imgWrapper";
-
 import NewFeatures from "../../components/NewFeatures/NewFeatures";
 import GradientContainer from "../../components/GradientContainer/GradientContainer";
 import { FC } from "react";

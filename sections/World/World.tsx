@@ -5,9 +5,7 @@ import {
   DescriptionText,
   TitleText,
 } from "../../components/customTexts/CustomTexts";
-
 import styles from "./world.module.scss";
-
 import { FC } from "react";
 
 const World: FC = () => (

@@ -2,11 +2,8 @@
 
 import Container from "../../components/container";
 import styles from "./feedback.module.scss";
-
 import { fadeIn } from "../../utils/motion";
-
 import { motion } from "framer-motion";
-import { dragConstraints } from "../../utils/motion";
 import GradientContainer from "../../components/GradientContainer/GradientContainer";
 import { FC } from "react";
 
@@ -42,12 +39,7 @@ const Feedback: FC = () => (
           whileInView="show"
           className={styles.imgItem}
         >
-          <motion.img
-            drag
-            dragConstraints={dragConstraints}
-            src="/planet-01.png"
-            alt=""
-          />
+          <motion.img src="/planet-01.png" alt="" />
         </motion.div>
       </div>
     </Container>

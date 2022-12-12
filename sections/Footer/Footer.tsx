@@ -3,9 +3,7 @@ import Link from "next/link";
 import Container from "../../components/container";
 import { socials } from "../../constants";
 import styles from "./footer.module.scss";
-
 import { footerVariants } from "../../utils/motion";
-
 import { motion } from "framer-motion";
 import GradientContainer from "../../components/GradientContainer/GradientContainer";
 import { FC } from "react";

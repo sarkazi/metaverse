@@ -6,9 +6,7 @@ import { opacityVariant } from "../../utils/motion";
 import { FC } from "react";
 import { IInsightData } from "../../typings";
 import { sanityClient } from "../../config/sanity-config";
-
 import { useNextSanityImage } from "next-sanity-image";
-
 import Image from "next/image";
 
 interface InsightCard {

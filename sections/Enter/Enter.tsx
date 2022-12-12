@@ -2,7 +2,6 @@
 import Container from "../../components/container";
 import { TitleText } from "../../components/customTexts/CustomTexts";
 import styles from "./enter.module.scss";
-
 import { motion } from "framer-motion";
 import { FC } from "react";
 

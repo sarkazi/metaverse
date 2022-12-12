@@ -6,9 +6,7 @@ import {
   TypingText,
 } from "../../components/customTexts/CustomTexts";
 import styles from "./about.module.scss";
-
 import GradientContainer from "../../components/GradientContainer/GradientContainer";
-
 import Link from "next/link";
 import { FC } from "react";
 

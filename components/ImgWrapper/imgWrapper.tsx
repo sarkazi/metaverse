@@ -1,12 +1,7 @@
 import React, { FC } from "react";
 import styles from "./imgWrapper.module.scss";
 import { motion } from "framer-motion";
-import {
-  dragConstraints,
-  planetVariants,
-  rotatePlanet,
-} from "../../utils/motion";
-import Image from "next/image";
+import { planetVariants } from "../../utils/motion";
 
 interface ImgWrapperProps {
   planet: string;
@@ -22,8 +17,6 @@ const ImgWrapper: FC<ImgWrapperProps> = ({ planet, directionRotate }) => {
           variants={planetVariants(directionRotate)}
           initial="hidden"
           whileInView="show"
-          drag
-          dragConstraints={dragConstraints}
           className={styles.imgPlanet}
           src={planet}
           alt="planet"

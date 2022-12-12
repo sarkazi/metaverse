@@ -3,7 +3,6 @@
 import styles from "./navbar.module.scss";
 import Container from "../container/index";
 import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { navVariants } from "../../utils/motion";
 import GradientContainer from "../GradientContainer/GradientContainer";

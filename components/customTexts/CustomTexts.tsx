@@ -1,14 +1,9 @@
 "use client";
 import styles from "./customTexts.module.scss";
-import { motion, MotionStyle } from "framer-motion";
+import { motion } from "framer-motion";
 
 import clsx from "clsx";
-import {
-  textVariant2,
-  textVariant,
-  textContainer,
-  fadeIn,
-} from "../../utils/motion";
+import { textVariant2, textContainer, fadeIn } from "../../utils/motion";
 import { CSSProperties, FC } from "react";
 
 interface TypingText {
@@ -17,7 +12,6 @@ interface TypingText {
 }
 
 export const TypingText: FC<TypingText> = ({ text, style }) => {
- 
   return (
     <motion.p
       variants={fadeIn("left", "tween", 0.1, 0.6)}
@@ -43,8 +37,6 @@ export const TitleText: FC<TitleText> = ({ title, style, center }) => (
     initial="hidden"
     whileInView="show"
     style={style}
-    drag
-    dragConstraints={{ right: 3, left: 3, bottom: 3, top: 3 }}
     className={clsx(styles.title, center && styles.center)}
   >
     {title}

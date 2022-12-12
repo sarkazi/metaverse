@@ -4,9 +4,7 @@ import { FC } from "react";
 import { IWhatsNewData } from "../../typings";
 import Square from "../Square/Square";
 import styles from "./newFeatures.module.scss";
-
 import Image from "next/image";
-
 import { sanityClient } from "../../config/sanity-config";
 import { useNextSanityImage } from "next-sanity-image";
 
