@@ -36,7 +36,7 @@ const Explore: FC<ExploreProps> = ({ explore }) => {
                     setActive={setActive}
                   />
                 ))
-              : Array.from({ length: 5 }).map((skeleton, index) => (
+              : Array.from({ length: 2 }).map((skeleton, index) => (
                   <Skeleton key={index} />
                 ))}
           </div>
