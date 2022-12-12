@@ -5,7 +5,7 @@ const sanityProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const sanityDataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 
 export const config = {
-  projectId: sanityProjectId || "zor846db",
+  projectId: sanityProjectId,
   dataset: sanityDataset || "production",
   useCdn: process.env.NODE_ENV === "production",
   apiVersion: "2021-10-21",

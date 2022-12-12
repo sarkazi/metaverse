@@ -16,6 +16,8 @@ import styles from "../styles/page.module.scss";
 import { GetStaticProps, NextPage } from "next";
 import { IExploreData, IInsightData, IWhatsNewData } from "../typings";
 import { fetchSanity } from "../utils/fetchSanity";
+import { groq } from "next-sanity";
+import { sanityClient } from "../config/sanity-config";
 
 type PageProps = {
   explore: IExploreData[];
@@ -24,8 +26,7 @@ type PageProps = {
 };
 
 const Page: NextPage<PageProps> = ({ explore, insight, whatsNew }) => {
-
-console.log(explore, insight, whatsNew)
+  console.log(explore, insight, whatsNew);
 
   return (
     <div className={styles.main}>
@@ -48,15 +49,21 @@ export default Page;
 
 export const getStaticProps: GetStaticProps<PageProps> = async (ctx) => {
   try {
-    const explore: IExploreData[] = await fetchSanity("getExplore");
-    const insight: IInsightData[] = await fetchSanity("insight");
-    const whatsNew: IWhatsNewData[] = await fetchSanity("whats-new");
+    const query = groq`
+
+*[_type == "insight"]
+`;
+
+    const insight = await sanityClient.fetch(query);
+    // const explore: IExploreData[] = await fetchSanity("getExplore");
+    // const insight: IInsightData[] = await fetchSanity("insight");
+    // const whatsNew: IWhatsNewData[] = await fetchSanity("whats-new");
 
     return {
       props: {
-        explore,
+        explore: [],
         insight,
-        whatsNew,
+        whatsNew: [],
       },
     };
   } catch (err) {
