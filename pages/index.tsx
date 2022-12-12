@@ -47,9 +47,7 @@ const Page: NextPage<PageProps> = ({ explore, insight, whatsNew }) => {
 
 export default Page;
 
-export const getServerSideProps: GetServerSideProps<PageProps> = async (
-  ctx
-) => {
+const getServerSideProps: GetServerSideProps<PageProps> = async (ctx) => {
   try {
     const query = groq`
 
