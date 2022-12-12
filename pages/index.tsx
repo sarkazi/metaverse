@@ -13,7 +13,7 @@ import {
 } from "../sections";
 import styles from "../styles/page.module.scss";
 
-import { GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import { IExploreData, IInsightData, IWhatsNewData } from "../typings";
 import { fetchSanity } from "../utils/fetchSanity";
 import { groq } from "next-sanity";
@@ -47,7 +47,9 @@ const Page: NextPage<PageProps> = ({ explore, insight, whatsNew }) => {
 
 export default Page;
 
-export const getStaticProps: GetStaticProps<PageProps> = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<PageProps> = async (
+  ctx
+) => {
   try {
     const query = groq`
 
