@@ -1,11 +1,11 @@
-import { createClient, SanityClient } from "next-sanity";
+import { createClient } from "next-sanity";
 import createImageUrlBuilder from "@sanity/image-url";
 
 const sanityProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const sanityDataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 
 export const config = {
-  projectId: sanityProjectId,
+  projectId: sanityProjectId || "zor846db",
   dataset: sanityDataset || "production",
   useCdn: process.env.NODE_ENV === "production",
   apiVersion: "2021-10-21",

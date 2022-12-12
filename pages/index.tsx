@@ -24,6 +24,9 @@ type PageProps = {
 };
 
 const Page: NextPage<PageProps> = ({ explore, insight, whatsNew }) => {
+
+console.log(explore, insight, whatsNew)
+
   return (
     <div className={styles.main}>
       <Navbar />
